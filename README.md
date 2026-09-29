@@ -125,6 +125,37 @@ Possible future improvements include:
 * Adding login functionality
 * Connecting the project to a database
 
+* ## Functional Requirements
+
+The system provides the following functional requirements:
+
+1. **Student Record Management**
+   The system allows users to add, display, search, update, and delete student records.
+
+2. **Marks Processing**
+   The system calculates average, highest, lowest, and total marks using NumPy.
+
+3. **Search and Organization**
+   The system allows users to search students by course and sort students according to their marks.
+
+4. **Student Statistics**
+   The system displays the number of students and basic marks statistics.
+
+## Non-Functional Requirements
+
+1. **Usability**
+   The system provides a simple menu-driven interface so users can interact with the application easily.
+
+2. **Reliability**
+   The system checks whether student records exist before performing operations and prevents duplicate roll numbers.
+
+3. **Maintainability**
+   The program is divided into separate functions for different operations, making the code easier to understand and maintain.
+
+4. **Error Handling**
+   The system provides messages for situations such as duplicate roll numbers, missing student records, and invalid menu choices.
+
+
 ## Author
 
 **Disha Yadav**
