@@ -1,164 +1,161 @@
 # Student Data Management System
 
-A Python-based **Student Data Management System** developed as a beginner-friendly programming project.
+## About the Project
 
-The system allows users to add, view, search, update, and delete student records. It also provides features for calculating marks statistics, checking pass/fail results, searching by course, and sorting students according to their marks.
+The Student Data Management System is a simple Python console-based project made to manage student records and perform basic analysis on their marks.
+
+The program provides a menu through which a user can add, view, search, update, and delete student records. It also includes some basic operations such as finding average marks, highest and lowest marks, pass/fail results, searching by course, and sorting students according to their marks.
+
+I made the project using separate Python files so that different parts of the program are easier to understand and manage.
 
 ## Features
 
-* Add new student records
+The main features of the project are:
+
+* Add a new student
 * Display all student records
 * Search for a student using roll number
 * Update student information
-* Delete student records
+* Delete a student record
 * Calculate average marks
 * Find highest and lowest marks
 * Display pass/fail results
 * Search students by course
 * Sort students by marks
-* Display student statistics
-* Demonstrate the use of tuples
-* Use NumPy arrays for marks calculations
+* Display basic statistics
+* Display selected student information as a tuple
 
 ## Technologies Used
 
 * Python
 * NumPy
-* GitHub
+* Git and GitHub
 
 ## Python Concepts Used
 
-This project demonstrates the following concepts:
+This project uses some basic Python concepts that I learned during the course, including:
 
-* Functions
 * Lists
-* Tuples
 * Dictionaries
-* `for` loops
-* `while` loops
-* `if`, `elif`, and `else` statements
+* Tuples
+* Functions
+* Loops
 * Conditional statements
-* Arrays
-* NumPy
-* Basic data manipulation
+* Modules and imports
+* Searching
+* Sorting
 
-## NumPy Usage
+NumPy is used for some of the marks calculations.
 
-NumPy is used in the project to store student marks in an array and perform calculations such as:
+## How NumPy is Used
 
-* Average marks
-* Highest marks
-* Lowest marks
-* Total marks
+The `marks_analysis.py` file uses NumPy to work with the marks of students.
 
-Example:
+It is used for:
 
-```python
-marks_array = np.array(marks_list)
+* Finding the average marks
+* Finding the highest marks
+* Finding the lowest marks
+* Finding the total marks
+* Creating an array of student marks
 
-average = np.mean(marks_array)
-highest = np.max(marks_array)
-lowest = np.min(marks_array)
-total = np.sum(marks_array)
+## Project Files
+
+```text
+Student Data Management System/
+│
+├── main.py
+├── student_data.py
+├── student_operations.py
+├── marks_analysis.py
+├── search_sort.py
+├── student_utils.py
+├── requirements.txt
+├── README.md
+├── statement.md
+├── .gitignore
+│
+├── class_diagram.png
+├── component_diagram.png
+├── sequence_diagram.png
+├── student_data_architecture.png
+├── student_data_flowchart.png
+└── student_data_use_case.png
 ```
 
-## How to Run
+### What each Python file does
 
-### 1. Install Python
+| File                    | Purpose                                                                |
+| ----------------------- | ---------------------------------------------------------------------- |
+| `main.py`               | Displays the main menu and controls the program                        |
+| `student_data.py`       | Stores the student records in the `roster` list                        |
+| `student_operations.py` | Handles adding, displaying, searching, updating, and deleting students |
+| `marks_analysis.py`     | Performs marks calculations and displays statistics                    |
+| `search_sort.py`        | Searches students by course and sorts students by marks                |
+| `student_utils.py`      | Displays selected student information as a tuple                       |
 
-Make sure Python is installed on your computer.
+## How to Run the Project
 
-### 2. Install NumPy
+First, make sure Python is installed.
 
-Open Command Prompt or Terminal and run:
+Install the required library:
 
 ```bash
-pip install numpy
+pip install -r requirements.txt
 ```
 
-### 3. Run the program
+Then run:
 
-Open the Python file:
-
-```text
-Student Data Management System.py
+```bash
+python main.py
 ```
 
-Run it using Python IDLE or another Python editor.
+The main menu will appear and the user can choose the required operation.
 
-## Main Menu
+## Data Storage
 
-The program provides the following options:
+At the moment, the project stores student information in a Python list called `roster`.
 
-```text
-1. Add Student
-2. Display Students
-3. Search Student
-4. Update Student
-5. Delete Student
-6. Calculate Average Marks
-7. Highest and Lowest Marks
-8. Pass/Fail Result
-9. Search by Course
-10. Sort Students by Marks
-11. Display Statistics
-12. Display Student Tuple
-13. Exit
-```
+The data is available while the program is running. Since the project does not use a database or permanent file storage, the data is lost when the program is closed.
 
-## Project Structure
+## Basic Error Handling
 
-```text
-student-data-management-system/
-│
-├── README.md
-└── Student Data Management System.py
-```
+The program handles some common situations, such as:
+
+* Trying to add a duplicate roll number
+* Trying to use an operation when there are no records
+* Searching for a student who does not exist
+* Selecting an invalid menu option
+
+## Documentation
+
+The project also includes documentation diagrams covering:
+
+* System workflow
+* System architecture
+* Use case diagram
+* Module/class structure
+* Component diagram
+* Sequence diagram
+
+The project statement and other documentation are also included in the repository.
 
 ## Future Improvements
 
-Possible future improvements include:
+Some things that could be added in the future are:
 
-* Saving student records permanently using files
-* Adding a graphical user interface
-* Adding student grades
-* Adding login functionality
+* Saving student data permanently
 * Connecting the project to a database
+* Better input validation
+* Attendance management
+* Grade calculation
+* A graphical user interface
+* Generating student reports
 
-* ## Functional Requirements
+## Project Status
 
-The system provides the following functional requirements:
-
-1. **Student Record Management**
-   The system allows users to add, display, search, update, and delete student records.
-
-2. **Marks Processing**
-   The system calculates average, highest, lowest, and total marks using NumPy.
-
-3. **Search and Organization**
-   The system allows users to search students by course and sort students according to their marks.
-
-4. **Student Statistics**
-   The system displays the number of students and basic marks statistics.
-
-## Non-Functional Requirements
-
-1. **Usability**
-   The system provides a simple menu-driven interface so users can interact with the application easily.
-
-2. **Reliability**
-   The system checks whether student records exist before performing operations and prevents duplicate roll numbers.
-
-3. **Maintainability**
-   The program is divided into separate functions for different operations, making the code easier to understand and maintain.
-
-4. **Error Handling**
-   The system provides messages for situations such as duplicate roll numbers, missing student records, and invalid menu choices.
-
+This is a working student project developed using Python. It currently focuses on basic student record management and marks analysis through a console-based menu.
 
 ## Author
 
 **Disha Yadav**
-
-
-
